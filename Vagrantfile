@@ -9,14 +9,13 @@ def fail_with_message(msg)
   fail Vagrant::Errors::VagrantError.new, msg
 end
 
-
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/bionic64"
   config.vm.box_url = "https://cloud-images.ubuntu.com/bionic/current/bionic-server-cloudimg-amd64-vagrant.box"
   config.vm.network :private_network, ip: ip, hostsupdater: 'skip'
   config.vm.hostname = 'staffjoy-v2.local'
   config.disksize.size = '30GB' # vagrant plugin install vagrant-disksize
-  
+
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder ".", "/home/vagrant/golang/src/v2.staffjoy.com", SharedFoldersEnableSymlinksCreate: true, owner: "vagrant", group: "vagrant"
   
