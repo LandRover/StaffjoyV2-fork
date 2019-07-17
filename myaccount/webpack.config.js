@@ -54,8 +54,10 @@ module.exports = {
         filename: bundleName,
     },
     devServer: {
+        hot: true,
+        compress: true,
         contentBase: "./dist",
-        hot: true
+        disableHostCheck: true,
     },
     eslint: {
         configFile: "./.eslintrc"
