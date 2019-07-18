@@ -24,7 +24,7 @@ module.exports = (env, options) => {
             rules: [
               {
                 enforce: 'pre',
-                test: /\.(js|jsx)disabled$/,
+                test: /\.(js|jsx)$/,
                 include: /src/,
                 exclude: [
                     /node_modules/,
@@ -42,7 +42,7 @@ module.exports = (env, options) => {
                 ],
               },
               {
-                test: /\.(js|j1sx)$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
               },
@@ -88,7 +88,7 @@ module.exports = (env, options) => {
 
         resolve: {
             modules: [path.resolve('node_modules')],
-            extensions: ['.js', '.jsx'],
+            extensions: ['*', '.js', '.jsx'],
         },
 
         watchOptions: {
