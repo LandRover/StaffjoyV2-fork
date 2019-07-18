@@ -32,7 +32,7 @@ export default class Intercom extends Component {
 
     const {
       appID,
-      ...otherProps,
+      ...otherProps
     } = props;
 
     if (!appID || !canUseDOM) {
@@ -74,7 +74,7 @@ export default class Intercom extends Component {
   componentWillReceiveProps(nextProps) {
     const {
       appID,
-      ...otherProps,
+      ...otherProps
     } = nextProps;
 
     if (!canUseDOM) return;

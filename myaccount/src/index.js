@@ -20,6 +20,7 @@ const currentEnv = detectEnvironment();
 if (currentEnv !== ENV_NAME_DEVELOPMENT) {
   const sentryKey = (currentEnv === ENV_NAME_PRODUCTION) ?
     SENTRY_PRODUCTION_KEY : SENTRY_STAGING_KEY;
+
   Raven
     .config(sentryKey)
     .install();

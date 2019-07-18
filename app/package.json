@@ -86,7 +86,7 @@
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
     "redux-form": "^6.1.1",
-    "redux-logger": "^2.6.1",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.1.0",
     "whatwg-fetch": "^1.0.0"
   }

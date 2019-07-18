@@ -36,8 +36,9 @@ pkg_tar(
 pkg_tar(
     name = "tar",
     srcs = glob([
-        "dist/bundle*.js",
-        "dist/assets/*",
+        "dist/*.bundle.js",
+        "dist/*.chunk.js",
+        "dist/assets/**/*",
     ]) + ["dist/index.html"],
     mode = "0644",
     package_dir = "/usr/share/nginx/html",
