@@ -1,12 +1,13 @@
 import _ from 'lodash';
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import * as actions from '../../actions';
 import SingleAttributeField from '../SingleAttributeField';
 import StaffjoyButton from '../StaffjoyButton';
 
-class AccountUpdate extends React.Component {
+class AccountUpdate extends Component {
   constructor(props) {
     super(props);
     this.state = {

@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../actions';
@@ -13,7 +14,7 @@ import StaffjoyButton from '../StaffjoyButton';
 import Intercom from '../Intercom';
 import { routeToMicroservice } from '../../utility';
 
-class App extends React.Component {
+class App extends Component {
 
   componentDidMount() {
     const { dispatch } = this.props;

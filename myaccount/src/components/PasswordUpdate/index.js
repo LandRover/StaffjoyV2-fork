@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 
@@ -8,7 +9,7 @@ import StaffjoyButton from '../StaffjoyButton';
 import PasswordsMatch from './PasswordsMatch';
 import * as actions from '../../actions';
 
-class PasswordUpdate extends React.Component {
+class PasswordUpdate extends Component {
   constructor(props) {
     super(props);
     this.state = {
