@@ -15,7 +15,6 @@ import Intercom from '../Intercom';
 import { routeToMicroservice } from '../../utility';
 
 class App extends Component {
-
   componentDidMount() {
     const { dispatch } = this.props;
 
@@ -93,11 +92,12 @@ class App extends Component {
           />
         </div>
         {!_.isEmpty(intercomSettings)
-        &&
+        && (
         <Intercom
           {...intercomSettings}
           appID={intercomSettings.app_id}
-        />}
+        />
+        )}
       </div>
     );
   }
@@ -108,14 +108,14 @@ function mapStateToProps(state) {
   const whoAmIState = state.whoami;
   const userData = userState.data;
   const formData = state.forms;
-  const intercomSettings = state.whoami.intercomSettings;
+  const { intercomSettings } = state.whoami;
 
   const admin = _.get(whoAmIState.data, 'admin', {});
   const companies = _.get(admin, 'companies') || [];
 
   return {
-    isInitializing: _.isEmpty(userData) || !userState.lastUpdate ||
-      _.isEmpty(whoAmIState.data),
+    isInitializing: _.isEmpty(userData) || !userState.lastUpdate
+      || _.isEmpty(whoAmIState.data),
     userData,
     formData,
     companies,

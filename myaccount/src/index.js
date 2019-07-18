@@ -18,8 +18,8 @@ require('./main.scss');
 const currentEnv = detectEnvironment();
 
 if (currentEnv !== ENV_NAME_DEVELOPMENT) {
-  const sentryKey = (currentEnv === ENV_NAME_PRODUCTION) ?
-    SENTRY_PRODUCTION_KEY : SENTRY_STAGING_KEY;
+  const sentryKey = (currentEnv === ENV_NAME_PRODUCTION)
+    ? SENTRY_PRODUCTION_KEY : SENTRY_STAGING_KEY;
 
   Raven
     .config(sentryKey)
@@ -32,5 +32,5 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );

@@ -3,7 +3,7 @@ import { Spinner } from 'react-mdl';
 
 require('./loading-screen.scss');
 const imgUrl = require(
-  '../../../../frontend_resources/images/staffjoy.png'
+  '../../../../frontend_resources/images/staffjoy.png',
 );
 
 function LoadingScreen() {

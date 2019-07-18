@@ -37,7 +37,7 @@ function mapDispatchToProps(dispatch) {
   return {
     changePhoto: bindActionCreators(
       actions.changePhoto,
-      dispatch
+      dispatch,
     ),
   };
 }

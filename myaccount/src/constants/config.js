@@ -8,7 +8,7 @@ export const ENV_NAME_PRODUCTION = 'PROD';
 /*eslint-disable */
 export const SENTRY_PRODUCTION_KEY = 'https://f4d735c8d9fc44e2a184f6dd858302c4@sentry.io/1496206';
 export const SENTRY_STAGING_KEY = 'https://f4d735c8d9fc44e2a184f6dd858302c4@sentry.io/1496206';
-/*eslint-enable */
+/* eslint-enable */
 
 // apex for the various staffjoy environments
 export const HTTP_PREFIX = 'http://';

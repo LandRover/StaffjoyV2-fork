@@ -5,7 +5,10 @@ function InfoStat({ label, stat }) {
   return (
     <div className="info-stat">
       <span>
-        <span className="label">{label}:</span>
+        <span className="label">
+          {label}
+:
+        </span>
         {stat}
       </span>
     </div>

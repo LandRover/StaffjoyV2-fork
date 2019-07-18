@@ -10,11 +10,13 @@ import StaffjoyButton from '../StaffjoyButton';
 class AccountUpdate extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       email: props.email,
       name: props.name,
       phoneNumber: props.phoneNumber,
     };
+
     this.changeName = this.changeName.bind(this);
     this.changeEmail = this.changeEmail.bind(this);
     this.changePhoneNumber = this.changePhoneNumber.bind(this);
@@ -38,8 +40,8 @@ class AccountUpdate extends Component {
       actions.changeAccountData(
         this.state.email,
         this.state.name,
-        this.state.phoneNumber
-      )
+        this.state.phoneNumber,
+      ),
     );
   }
 

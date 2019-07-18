@@ -34,8 +34,8 @@ class PasswordUpdate extends Component {
     if (this.state.newPassword === this.state.confirmPassword) {
       this.props.dispatch(
         actions.changePassword(
-          this.state.newPassword
-        )
+          this.state.newPassword,
+        ),
       );
     }
 
@@ -49,8 +49,8 @@ class PasswordUpdate extends Component {
   render() {
     const { formData } = this.props;
     const { newPassword, confirmPassword } = this.state;
-    const passwordButtonDisabled = _.isEmpty(confirmPassword) ||
-      (newPassword !== confirmPassword);
+    const passwordButtonDisabled = _.isEmpty(confirmPassword)
+      || (newPassword !== confirmPassword);
     let element = null;
 
     if (!_.isEmpty(formData)) {

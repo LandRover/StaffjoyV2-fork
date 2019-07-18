@@ -3,7 +3,9 @@ import React from 'react';
 
 require('./checkbox-field.scss');
 
-function CheckboxField({ id, description, attribute, checked, onChange }) {
+function CheckboxField({
+  id, description, attribute, checked, onChange,
+}) {
   return (
     <div className="checkbox-field">
       <input

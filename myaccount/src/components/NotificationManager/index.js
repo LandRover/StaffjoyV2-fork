@@ -43,7 +43,7 @@ function mapDispatchToProps(dispatch) {
   return {
     modifyUserAttribute: bindActionCreators(
       actions.modifyUserAttribute,
-      dispatch
+      dispatch,
     ),
   };
 }
@@ -57,5 +57,5 @@ NotificationManager.propTypes = {
 
 export default connect(
   null,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(NotificationManager);
