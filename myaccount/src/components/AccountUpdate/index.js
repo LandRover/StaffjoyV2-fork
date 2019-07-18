@@ -95,7 +95,7 @@ AccountUpdate.propTypes = {
   email: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   phoneNumber: PropTypes.string.isRequired,
-  dispatch: PropTypes.func,
+  dispatch: PropTypes.func.isRequired,
   formData: PropTypes.object.isRequired,
 };
 

@@ -20,12 +20,19 @@ function CheckboxField({
     </div>
   );
 }
+
 CheckboxField.propTypes = {
   attribute: PropTypes.string,
-  checked: React.PropTypes.bool,
+  checked: PropTypes.bool,
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  onChange: React.PropTypes.func,
+  onChange: PropTypes.func,
+};
+
+CheckboxField.defaultProps = {
+  attribute: '',
+  checked: false,
+  onChange: () => {},
 };
 
 export default CheckboxField;

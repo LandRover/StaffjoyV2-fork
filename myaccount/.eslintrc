@@ -14,9 +14,10 @@
         "es6": true
     },
     "rules": {
-        "max-len": [1, 80, 2, {ignoreComments: true}],
+        "max-len": [1, 120, 2, {ignoreComments: true}],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/forbid-prop-types": "off",
-        "import/prefer-default-export": "off",
+        "react/destructuring-assignment": "off",
+        "import/prefer-default-export": "off"
     }
 }

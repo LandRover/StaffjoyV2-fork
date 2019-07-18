@@ -11,6 +11,7 @@ function ProfilePhoto({ photoUrl }) {
         className="circle-frame"
         role="presentation"
         src={photoUrl}
+        alt=""
       />
     </div>
   );

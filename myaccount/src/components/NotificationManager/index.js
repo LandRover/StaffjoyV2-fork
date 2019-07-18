@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unused-prop-types */
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -53,6 +55,10 @@ NotificationManager.propTypes = {
   enableSmsNotifications: PropTypes.bool.isRequired,
   enableReminders: PropTypes.bool.isRequired,
   modifyUserAttribute: PropTypes.func,
+};
+
+NotificationManager.defaultProps = {
+  modifyUserAttribute: () => {},
 };
 
 export default connect(

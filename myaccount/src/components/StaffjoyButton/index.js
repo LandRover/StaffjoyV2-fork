@@ -8,9 +8,9 @@ function StaffjoyButton({
   children,
   onClick,
   active,
-  className = '',
-  size = 'small',
-  buttonType = 'primary',
+  className,
+  size,
+  buttonType,
   ...otherProps
 }) {
   const classes = classNames({
@@ -22,7 +22,12 @@ function StaffjoyButton({
   });
 
   return (
-    <button className={classes} onClick={onClick} {...otherProps}>
+    <button
+      type="button"
+      className={classes}
+      onClick={onClick}
+      {...otherProps}
+    >
       {children}
     </button>
   );
@@ -35,6 +40,14 @@ StaffjoyButton.propTypes = {
   buttonType: PropTypes.string,
   onClick: PropTypes.func,
   active: PropTypes.bool,
+};
+
+StaffjoyButton.defaultProps = {
+  active: false,
+  size: 'small',
+  className: '',
+  buttonType: 'primary',
+  onClick: () => {},
 };
 
 export default StaffjoyButton;

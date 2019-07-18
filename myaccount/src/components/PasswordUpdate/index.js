@@ -97,7 +97,7 @@ class PasswordUpdate extends Component {
 }
 
 PasswordUpdate.propTypes = {
-  dispatch: PropTypes.func,
+  dispatch: PropTypes.func.isRequired,
   formData: PropTypes.object.isRequired,
 };
 
